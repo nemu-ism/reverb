@@ -7,6 +7,8 @@ class Commands:
             'tweet':'ツイートできます',
             'favorite':'つぶやきIDを利用してふぁぼれます',
             'timeline':'Homeタイムラインを表示します(15件)',
+            'follow':'ユーザをフォローします'
+            'help':'コマンド一覧を表示します    '
             'exit':'プログラムを終了します'
         }
         for k, v in dict.items():

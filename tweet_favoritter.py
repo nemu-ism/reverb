@@ -5,7 +5,7 @@ class TweetFavoritter:
         pass
 
     def favoritter(self, api):
-        id = int(input("つぶやきIDを入力してください:").strip())
+        id = int(input("つぶやきIDを入力してください: ").strip())
         try:
             api.CreateFavorite(status_id=id)
             print("ふぁぼりました")
