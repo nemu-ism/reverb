@@ -12,7 +12,6 @@ class colors:
     END = '\033[0m'
 
     def __init__(self):
-
         pass
 
     def random_color(self):
@@ -24,6 +23,6 @@ class colors:
         '\033[1;35m',
         '\033[0;36m',
         '\033[0;37m'
-    ]
+        ]
         color = random.choice(color_palette)
         return color
