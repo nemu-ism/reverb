@@ -33,7 +33,7 @@ class Login:
 
         api = twitter.Api(Consumer_key, Consumer_secret, Access_token, Access_token_secret)
 
-        print("login ok")
+        print("login：ok")
         return api
 
 if __name__ == '__main__':

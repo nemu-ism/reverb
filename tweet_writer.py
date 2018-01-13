@@ -5,7 +5,6 @@ class TweetWriter:
         pass
 
     def tweeter(self, api):
-        print("start tweeter")
         tweet_content = input("つぶやく内容を入力してください:").strip()
         try:
             api.PostUpdates(tweet_content)

@@ -9,6 +9,7 @@ class colors:
     # CYAN = '\033[0;36m'
     # WHITE = '\033[0;37m'
 
+    INVISIBLE = '\033[08m'
     END = '\033[0m'
 
     def __init__(self):
