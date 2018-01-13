@@ -5,9 +5,9 @@ class FollowAdd():
         pass
 
     def follow_add(self, api):
+        name = input("フォローしたいユーザーの＠ネームを入力してください: @").strip()
         try:
-            name = input("フォローしたいユーザーの＠ネームを入力してください: @").strip()
-            api.CreateFriendship(screen_name=name)
+            api.CreateFriendship(screen_name = name)
             print("{:} さんをフォローしました".format(name))
         except:
-            ("{:} さんをフォローできませんでした".format(name))
+            print("{:} さんをフォローできませんでした".format(name))

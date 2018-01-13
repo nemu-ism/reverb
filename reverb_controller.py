@@ -1,6 +1,7 @@
 import sys
 import commands
 import follow_add
+import follow_remove
 import tweet_writer
 import tweet_favoritter
 import show_timeline
@@ -9,6 +10,7 @@ class Main:
     def __init__(self):
         self.commands = commands.Commands()
         self.adder = follow_add.FollowAdd()
+        self.remover = follow_remove.FollowRemove()
         self.tweeter = tweet_writer.TweetWriter()
         self.favoritter = tweet_favoritter.TweetFavoritter()
         self.timeliner = show_timeline.ShowTimeline()
@@ -21,6 +23,8 @@ class Main:
                 self.commands.show_commands()
             elif control == "follow":
                 self.adder.follow_add(api)
+            elif control == "remove":
+                self.remover.follow_remove(api)
             elif control == "tweet":
                 self.tweeter.tweeter(api)
             elif control == "favorite":
