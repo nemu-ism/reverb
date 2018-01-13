@@ -1,4 +1,7 @@
 import reverb
 
 api = reverb.api
-api.update_status(status ="")
+
+#tweet_content = input("Your tweet is:").strip()
+
+api.update_status(status='hai')
