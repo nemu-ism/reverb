@@ -8,8 +8,8 @@ class Login:
         pass
 
     def login(self):
-        Consumer_key = 'CqMaN3s51fk1fzc7LaVpzS788'
-        Consumer_secret = 'qSGbRed3cuDZFyfhKVusWD7wpTkTmvpn7w141f2vGCxpyzYNap'
+        Consumer_key = 'lIOyR3Dr4s71IToKL17EMCYAD'
+        Consumer_secret = 'kzhdWMMlzezKgJWsh8WfPlYnDUe3iyjFRbwHrsqjOlbulbOmXm'
         Access_token = ''
         Access_token_secret = ''
         auth = tweepy.OAuthHandler(Consumer_key, Consumer_secret)
@@ -28,8 +28,8 @@ class Login:
         # Access_token = auth.access_token
         # Access_token_secret = auth.access_token_secret
 
-        Access_token = '3148157702-l7yVVD3mLREox0e8Cic7lVKhzxiMTb0eDTGPji2'
-        Access_token_secret = 'pO24QfAWjOLzROMNd9Dqv1xafS8xddI3v2aCiiT1YIuf7'
+        Access_token = '3148157702-uk8cD6pxy6Bk11Bd9aUTS6CImthWJSfVLcSYwKq'
+        Access_token_secret = '0YBvla1a22CTGqQZGfmdqBKpKc4i5LU2qjzDLBEF86qKw'
 
         api = twitter.Api(Consumer_key, Consumer_secret, Access_token, Access_token_secret)
 
@@ -37,4 +37,10 @@ class Login:
         return api
 
 if __name__ == '__main__':
-    Login().login()
+    api = Login().login()
+    tweet_content = '進捗dame'
+    try:
+        api.PostUpdates(tweet_content)
+        print("次の内容でつぶやきました：{:}".format(tweet_content))
+    except:
+        print("つぶやき内容の取得に失敗しました。")
