@@ -1,15 +1,12 @@
 import sys
 import login
-
-try:
-    api = login.api
-except:
-    print("system has stopped")
-    sys.exit()
+import reverb_controller
 
 if __name__ == '__main__':
     try:
-        api = login.api
+        print("ready")
+        api = login.Login().login()
+        reverb_controller.Main().main(api)
     except:
         print("system has stopped")
         sys.exit()
