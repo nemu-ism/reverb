@@ -16,11 +16,13 @@ for _ in range(10):
     verifier = input('認証コードを入力: ').strip()
     try:
         auth.get_access_token(verifier)
-        Access_token = auth.access_token
-        Access_token_secret = auth.access_token_secret
     except:
         print("認証コードが違います。")
         pass
+    else:
+        Access_token = auth.access_token
+        Access_token_secret = auth.access_token_secret
+        break
 else:
     print("認証コードの入力に失敗しました。")
     sys.exit()
