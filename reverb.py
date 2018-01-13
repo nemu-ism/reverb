@@ -1,10 +1,17 @@
 import sys
-import twitter
 import login
+
+try:
+    api = login.api
+except:
+    print("system has stopped")
+    sys.exit()
+
+
 
 if __name__ == '__main__':
     try:
-        login()
+        api = login.api
     except:
-        print("system stopped")
+        print("system has stopped")
         sys.exit()
