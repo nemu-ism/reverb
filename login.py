@@ -1,3 +1,4 @@
+import secrets
 import sys
 import twitter
 import tweepy
@@ -28,8 +29,8 @@ class Login:
         # Access_token = auth.access_token
         # Access_token_secret = auth.access_token_secret
 
-        Access_token = '3148157702-uk8cD6pxy6Bk11Bd9aUTS6CImthWJSfVLcSYwKq'
-        Access_token_secret = '0YBvla1a22CTGqQZGfmdqBKpKc4i5LU2qjzDLBEF86qKw'
+        Access_token = secrets.secrets.ACCESS_TOKEN
+        Access_token_secret = secrets.secrets.ACCESS_TOKEN_SECRET
 
         api = twitter.Api(Consumer_key, Consumer_secret, Access_token, Access_token_secret)
 
