@@ -11,4 +11,3 @@ class Commands:
         }
         for k, v in dict.items():
             print("{0:} : {1:}".format(k, v))
- 

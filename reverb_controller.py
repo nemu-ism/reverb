@@ -5,15 +5,12 @@ import tweet_favoritter
 import show_timeline
 
 class Main:
-
     def __init__(self):
         self.commands = commands.Commands()
         self.tweeter = tweet_writer.TweetWriter()
         self.favoritter = tweet_favoritter.TweetFavoritter()
         self.timeliner = show_timeline.ShowTimeline()
         pass
-
-
 
     def main(self, api):
         while(True):

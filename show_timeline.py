@@ -6,7 +6,6 @@ class ShowTimeline:
         self.colors = color_palette.colors()
         pass
 
-
     def show_homeTimeline(self, api):
         statuse = api.GetHomeTimeline(count=15)
 
