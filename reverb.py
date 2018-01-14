@@ -27,10 +27,12 @@ class Main:
                 self.favoritter.add_favorite(api)
             elif control == "home":
                 self.timeliner.show_home(api)
-            elif control == "mylist":
+            elif control == "mylists":
                 self.timeliner.show_mylists(api)
             elif control == "timeline":
                 self.timeliner.show_timeline(api)
+            elif control == "search":
+                self.timeliner.show_search(api)
             elif control == "exit":
                 break
         sys.exit() 

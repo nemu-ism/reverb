@@ -7,9 +7,13 @@ class TimelineController:
         pass
 
     def show_home(self, api):
-        statuse = api.GetHomeTimeline(count=15)
+        try:
+            statuses = api.GetHomeTimeline(count=15)
+        except:
+            print("タイムラインの取得に失敗しました")
+
         print("-"*80)
-        for s in statuse:
+        for s in statuses:
             time = s.created_at.split()
             print(self.colors.random_color()+ "{0:}(@{1:}) at {2:}/{3:}/{4:} {5:}".format(
                 s.user.name,s.user.screen_name, time[5], time[1], time[2], time[3]
@@ -20,8 +24,12 @@ class TimelineController:
         print("-"*80) 
 
     def show_mylists(self, api):
-         list = api.GetListsList()
-         for l in list:
+        try:
+            list = api.GetListsList()
+        except:
+            print("リストの取得に失敗しました")
+
+        for l in list:
              print(self.colors.random_color()+ "{0:} @{1:}".format(
                  l.name, l.user.screen_name
                  ) +self.colors.END, end="")
@@ -30,12 +38,12 @@ class TimelineController:
     def show_timeline(self, api):
         id = input("表示したいリストのIDを入力してください： ").strip()
         try:
-            statuse = api.GetListTimeline(id, count=15)
+            statuses = api.GetListTimeline(id, count=15)
         except:
             print("リストの取得に失敗しました")
 
         print("-"*80)
-        for s in statuse:
+        for s in statuses:
             time = s.created_at.split()
             print(self.colors.random_color()+ "{0:}(@{1:}) at {2:}/{3:}/{4:} {5:}".format(
                 s.user.name,s.user.screen_name, time[5], time[1], time[2], time[3]
@@ -44,3 +52,21 @@ class TimelineController:
             print("""{:}""".format(s.text)
             ) 
         print("-"*80)
+
+    def show_search(self, api):
+        word = input("検索したいワードを入力してください： ")
+        try:
+            statuses = api.GetSearch(term = word, count = 15)
+        except:
+            print("検索に失敗しました")
+        print("-"*80)
+        for s in statuses:
+            time = s.created_at.split()
+            print(self.colors.random_color()+ "{0:}(@{1:}) at {2:}/{3:}/{4:} {5:}".format(
+                s.user.name,s.user.screen_name, time[5], time[1], time[2], time[3]
+                ) +self.colors.END, end="")
+            print(" id:{:}".format(s.id))
+            print("""{:}""".format(s.text)
+            ) 
+        print("-"*80)
+            
