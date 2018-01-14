@@ -27,8 +27,12 @@ class Main:
                 self.tweeter.tweeter(api)
             elif control == "favorite":
                 self.favoritter.favoritter(api)
+            elif control == "home":
+                self.timeliner.show_home(api)
+            elif control == "mylist":
+                self.timeliner.show_mylists(api)
             elif control == "timeline":
-                self.timeliner.show_homeTimeline(api)
+                self.timeliner.show_timeline(api)
             elif control == "exit":
                 break
         sys.exit() 
