@@ -69,4 +69,3 @@ class TimelineController:
             print("""{:}""".format(s.text)
             ) 
         print("-"*80)
-            

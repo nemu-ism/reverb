@@ -15,5 +15,7 @@ class Commands:
             'help':'コマンド一覧を表示します',
             'exit':'プログラムを終了します'
         }
+        print("-"*80)
         for k, v in dict.items():
             print("{0:} : {1:}".format(k, v))
+        print("-"*80)
