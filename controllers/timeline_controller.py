@@ -8,7 +8,7 @@ class TimelineController:
 
     def show_home(self, api):
         statuse = api.GetHomeTimeline(count=15)
-
+        print("-"*80)
         for s in statuse:
             time = s.created_at.split()
             print(self.colors.random_color()+ "{0:}(@{1:}) at {2:}/{3:}/{4:} {5:}".format(
@@ -16,7 +16,8 @@ class TimelineController:
                 ) +self.colors.END, end="")
             print(" id:{:}".format(s.id))
             print("""{:}""".format(s.text)
-            )  
+            ) 
+        print("-"*80) 
 
     def show_mylists(self, api):
          list = api.GetListsList()
@@ -33,6 +34,7 @@ class TimelineController:
         except:
             print("リストの取得に失敗しました")
 
+        print("-"*80)
         for s in statuse:
             time = s.created_at.split()
             print(self.colors.random_color()+ "{0:}(@{1:}) at {2:}/{3:}/{4:} {5:}".format(
@@ -41,3 +43,4 @@ class TimelineController:
             print(" id:{:}".format(s.id))
             print("""{:}""".format(s.text)
             ) 
+        print("-"*80)
