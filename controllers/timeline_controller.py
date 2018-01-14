@@ -1,9 +1,9 @@
-import color_palette
+import materials
 import twitter
 
-class ShowTimeline:
+class TimelineController:
     def __init__(self):
-        self.colors = color_palette.colors()
+        self.colors = materials.color_palette.colors()
         pass
 
     def show_home(self, api):

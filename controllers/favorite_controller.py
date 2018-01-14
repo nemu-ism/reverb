@@ -1,11 +1,11 @@
 import twitter
 
-class TweetFavoritter:
+class FavoriteController:
     def __init__(self):
         pass
 
-    def favoritter(self, api):
-        id = int(input("つぶやきIDを入力してください: ").strip())
+    def add_favorite(self, api):
+        id = int(input("ふぁぼりたいツイートのIDを入力してください: ").strip())
         try:
             api.CreateFavorite(status_id=id)
             print("ふぁぼりました")

@@ -3,7 +3,7 @@ import sys
 import twitter
 import tweepy
 
-class Login:
+class OauthController:
     def __init__(self):
         pass
 
