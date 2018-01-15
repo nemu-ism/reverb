@@ -37,8 +37,8 @@ class Main:
                 self.favoritter.add_favorite(api)
             elif control == "home":
                 self.timeliner.show_home(api)
-            elif control == "mylists":
-                self.timeliner.show_mylists(api)
+            elif control == "lists":
+                self.timeliner.show_lists(api)
             elif control == "timeline":
                 self.timeliner.show_timeline(api)
             elif control == "search":

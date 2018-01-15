@@ -30,9 +30,10 @@ class TimelineController:
             print("""{:}""".format(s.text)) 
         print("-"*80) 
 
-    def show_mylists(self, api):
+    def show_lists(self, api):
+        name = input("リストを表示したいユーザーの＠ネームを入力してください: ").strip()
         try:
-            list = api.GetListsList()
+            list = api.GetListsList(screen_name = name)
         except:
             print("リストの取得に失敗しました")
 
