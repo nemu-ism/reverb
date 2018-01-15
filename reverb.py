@@ -24,7 +24,9 @@ class Main:
             elif control == "mute":
                 self.follower.mute_add(api)
             elif control == "tweet":
-                self.tweeter.tweeter(api)
+                self.tweeter.tweet(api)
+            elif control == "retweet":
+                self.tweeter.retweet(api)
             elif control == "favorite":
                 self.favoritter.add_favorite(api)
             elif control == "home":

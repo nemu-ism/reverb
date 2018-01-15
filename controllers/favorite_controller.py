@@ -10,4 +10,4 @@ class FavoriteController:
             api.CreateFavorite(status_id=id)
             print("ふぁぼりました")
         except:
-            print("ふぁぼれませんでした、つぶやきIDを確認してください")
+            print("ふぁぼれませんでした、ツイートIDを確認してください")
