@@ -19,3 +19,11 @@ class FollowController:
             print("{:} さんをリムーブしました".format(name))
         except:
             print("{:} さんをリムーブできませんでした".format(name))
+
+    def mute_add(self, api):
+        name = input("ミュートしたいユーザーの＠ネームを入力してください： @").strip()
+        try:
+            api.CreateMute(screen_name = name)
+            print("{:} さんをミュートしました".format(name))
+        except:
+            print("{:} さんをミュートできませんでした".format(name))

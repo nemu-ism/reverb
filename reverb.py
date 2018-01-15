@@ -21,6 +21,8 @@ class Main:
                 self.follower.follow_add(api)
             elif control == "remove":
                 self.follower.follow_remove(api)
+            elif control == "mute":
+                self.follower.mute_add(api)
             elif control == "tweet":
                 self.tweeter.tweeter(api)
             elif control == "favorite":
