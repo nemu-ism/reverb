@@ -40,7 +40,7 @@ class TimelineController:
              print(self.colors.random_color()+ "{0:} @{1:}".format(
                  l.name, l.user.screen_name
                  ) +self.colors.END, end="")
-             print(" id:{:}".format(l.id))
+             print(" users:{0:} id:{1:}".format(l.member_count, l.id))
 
     def show_timeline(self, api):
         id = input("表示したいリストのIDを入力してください： ").strip()
