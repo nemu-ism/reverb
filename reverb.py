@@ -43,6 +43,8 @@ class Main:
                 self.timeliner.show_timeline(api)
             elif control == "search":
                 self.timeliner.show_search(api)
+            elif control == "stalk":
+                self.timeliner.stalk(api)
             elif control == "exit":
                 break
         sys.exit() 
