@@ -34,4 +34,6 @@ class OauthController:
         api = twitter.Api(Consumer_key, Consumer_secret, Access_token, Access_token_secret)
 
         print("login：ok")
+        user = api.UpdateProfile(skip_status=True)
+        print("ようこそ、{0:} (@{1:})さん".format(user.name, user.screen_name))
         return api
