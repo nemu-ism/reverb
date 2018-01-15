@@ -70,3 +70,17 @@ class TimelineController:
             ) 
         print("-"*80)
             
+    def stalk(self, api):
+        name = input("誰のストーカーリストを作成しますか？: @").strip()
+        try:
+            # get friend's follows
+            friends = api.GetFriendIDs(screen_name = name)
+            
+            list = api.CreateList(name = "@{:}".format(name))
+            print("しばらくお待ちください")
+            for f in friends:
+                api.CreateListsMember(list_id = list.id, user_id = f)
+
+            print("リストを作成しました") 
+        except:
+            ("リストの作成に失敗しました")
