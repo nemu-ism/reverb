@@ -27,3 +27,19 @@ class FollowController:
             print("{:} さんをミュートしました".format(name))
         except:
             print("{:} さんをミュートできませんでした".format(name))
+
+    def mute_remove(self, api):
+        name = input("ミュートを外したいユーザーの＠ネームを入力してください： @").strip()
+        try:
+            api.DestroyMute(screen_name = name)
+            print("{:} さんのミュートを外しました".format(name))
+        except:
+            print("{:} さんのミュートを外せませんでした".format(name))
+
+    def mute_list(self, api):
+        try:
+            list = api.GetMutes()
+            for l in list:
+                print("{0:} (@{1:})".format(l.name, l.screen_name))
+        except:
+            print("ミュートしているユーザーがいません")
