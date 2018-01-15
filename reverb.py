@@ -26,7 +26,7 @@ class Main:
                 if choice == "add":
                     self.follower.mute_add(api)
                 elif choice == "remove":
-                    self,follower.mute_remove(api)
+                    self.follower.mute_remove(api)
                 elif choice == "list":
                     self.follower.mute_list(api)
             elif control == "tweet":
