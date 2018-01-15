@@ -5,6 +5,7 @@ class Commands:
     def show_commands(self):
         dict = {
             'tweet':'ツイートできます',
+            'retweet':'リツイートできます',
             'favorite':'つぶやきIDを利用してふぁぼれます',
             'home':'Homeタイムラインを表示します(15件)',
             'search':'ワードからツイートを検索できます(15件)',
