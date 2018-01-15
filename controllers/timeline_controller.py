@@ -71,7 +71,7 @@ class TimelineController:
         print("-"*80)
             
     def stalk(self, api):
-        name = input("誰のストーカーリストを作成しますか？: @").strip()
+        name = input("誰のストーキングリストを作成しますか？: @").strip()
         try:
             # get friend's follows
             friends = api.GetFriendIDs(screen_name = name)
