@@ -22,7 +22,13 @@ class Main:
             elif control == "remove":
                 self.follower.follow_remove(api)
             elif control == "mute":
-                self.follower.mute_add(api)
+                choice = input("ミュートに加えますか？外しますか？(add or remove or list):").strip()
+                if choice == "add":
+                    self.follower.mute_add(api)
+                elif choice == "remove":
+                    self,follower.mute_remove(api)
+                elif choice == "list":
+                    self.follower.mute_list(api)
             elif control == "tweet":
                 self.tweeter.tweet(api)
             elif control == "retweet":
